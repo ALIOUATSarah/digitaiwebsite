@@ -1,47 +1,33 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import numpy as np
 import base64
-import io
-from PIL import Image, ImageOps
+from io import BytesIO
+from PIL import Image
+import numpy as np
 import tensorflow as tf
 
-# Load your trained CNN model
+app = Flask(__name__)
+CORS(app)
+
 model = tf.keras.models.load_model("cnn_mnist_model.h5")
 
-# Initialize Flask app
-app = Flask(__name__)
-CORS(app)  # Allow CORS for requests from your React frontend
-
-@app.route('/predict', methods=['POST'])
+@app.route("/predict", methods=["POST"])
 def predict():
-    try:
-        data = request.get_json()
-        image_data = data['image'].split(",")[1]  # Remove data:image/png;base64,
+    data = request.get_json()
+    image_data = data.get("image")
 
-        # Convert base64 to grayscale image
-        image = Image.open(io.BytesIO(base64.b64decode(image_data))).convert("L")
+    if not image_data:
+        return jsonify({"error": "No image data provided"}), 400
 
-        # Resize to 28x28 (like MNIST) and invert for white digit on black background
-        image = image.resize((28, 28))
-        image = ImageOps.invert(image)
+    image_data = image_data.split(",")[1]
+    image = Image.open(BytesIO(base64.b64decode(image_data))).convert("L").resize((28, 28))
+    image = np.array(image).reshape(1, 28, 28, 1) / 255.0
 
-        # Convert to array and normalize
-        img_array = np.array(image) / 255.0
-        img_array = img_array.reshape(1, 28, 28, 1)
+    prediction = model.predict(image)
+    predicted_digit = np.argmax(prediction)
+    confidence = float(np.max(prediction)) * 100
 
-        # Make prediction
-        prediction = model.predict(img_array)
-        predicted_digit = int(np.argmax(prediction))
-        confidence = int(np.max(prediction) * 100)
-
-        return jsonify({
-            "prediction": predicted_digit,
-            "confidence": confidence
-        })
-
-    except Exception as e:
-        return jsonify({ "error": str(e) })
+    return jsonify({"prediction": int(predicted_digit), "confidence": round(confidence, 2)})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=5000)
