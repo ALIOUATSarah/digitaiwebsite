@@ -132,14 +132,13 @@ export default function DrawPage() {
     const image = canvas.toDataURL("image/png") // base64 PNG
 
     try {
-      const res = await fetch("https://ai-digits-recognition.onrender.com/predict", {
+      const res = await fetch("http://127.0.0.1:5000/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ image }),
       })
-
       const data = await res.json()
       const endTime = Date.now()
       const processingTimeMs = endTime - startTime
@@ -195,7 +194,7 @@ export default function DrawPage() {
               </div>
             </div>
             <div className="flex items-center space-x-2">
-              <Badge className="bg-green-100 text-green-800">Live Demo</Badge>
+              <Badge className="bg-green-100 text-green-800">Live demo</Badge>
             </div>
           </div>
         </div>
@@ -209,7 +208,7 @@ export default function DrawPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Interactive Digit Recognition</h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Experience our advanced CNN technology in action. Draw any digit (0-9) and watch our AI provide instant,
-              accurate predictions with detailed confidence analysis.
+              accurate predictions with detailed confidence results.
             </p>
           </div>
 
