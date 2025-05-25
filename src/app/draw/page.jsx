@@ -271,7 +271,7 @@ export default function DrawPage() {
                         ref={canvasRef}
                         width={500}
                         height={500}
-                        className="border-2 border-gray-300 rounded-2xl cursor-crosshair bg-white shadow-inner max-w-full h-auto"
+                          className="border-2 border-gray-300 rounded-2xl cursor-crosshair bg-white shadow-inner max-w-full h-auto touch-none"
                         style={{ width: "100%", maxWidth: "500px", aspectRatio: "1" }}
                         onMouseDown={startDrawing}
                         onMouseMove={draw}
