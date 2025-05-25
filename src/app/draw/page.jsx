@@ -132,7 +132,7 @@ export default function DrawPage() {
     const image = canvas.toDataURL("image/png") // base64 PNG
 
     try {
-      const res = await fetch("https://ai-digits-recognition.onrender.com", {
+      const res = await fetch("https://firstwebsite-xf6o.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
