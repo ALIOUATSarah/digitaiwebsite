@@ -69,6 +69,7 @@ export default function DrawPage() {
     let x, y
     if (e.touches) {
       e.preventDefault()
+      document.body.style.overflow = 'hidden' 
       x = e.touches[0].clientX - rect.left
       y = e.touches[0].clientY - rect.top
     } else {
@@ -93,6 +94,7 @@ export default function DrawPage() {
     let x, y
     if (e.touches) {
       e.preventDefault()
+      document.body.style.overflow = 'hidden' 
       x = e.touches[0].clientX - rect.left
       y = e.touches[0].clientY - rect.top
     } else {
@@ -106,6 +108,7 @@ export default function DrawPage() {
 
   const stopDrawing = () => {
     setIsDrawing(false)
+     document.body.style.overflow = 'auto'
   }
 
   const clearCanvas = () => {
@@ -132,7 +135,7 @@ export default function DrawPage() {
     const image = canvas.toDataURL("image/png") // base64 PNG
 
     try {
-      const res = await fetch("https://firstwebsite-xf6o.onrender.com", {
+      const res = await fetch("https://firstwebsite-xf6o.onrender.com/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
