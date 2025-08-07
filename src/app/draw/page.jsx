@@ -133,15 +133,19 @@ export default function DrawPage() {
     if (!canvas) return
 
     const image = canvas.toDataURL("image/png") // base64 PNG
+console.log("Image data:", imageDataURL);
 
     try {
-      const res = await fetch("https://firstwebsite-xf6o.onrender.com/predict", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ image }),
-      })
+  const res = await fetch("https://backend-project-wjnj.onrender.com/predict", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    image: imageDataURL, // make sure this is the full base64 string
+  }),
+});
+
       const data = await res.json()
       const endTime = Date.now()
       const processingTimeMs = endTime - startTime
@@ -210,7 +214,7 @@ export default function DrawPage() {
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Interactive Digit Recognition</h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Experience our advanced CNN technology in action. Draw any digit (0-9) and watch our AI provide instant,
+              Experience our advanced MLP technology in action. Draw any digit (0-9) and watch our AI provide instant,
               accurate predictions with detailed confidence results.
             </p>
           </div>
@@ -218,7 +222,7 @@ export default function DrawPage() {
           {/* Stats Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             <Card className="text-center p-4 bg-white/60 backdrop-blur-sm border-blue-200">
-              <div className="text-2xl font-bold text-blue-600">99.14%</div>
+              <div className="text-2xl font-bold text-blue-600">98.2%</div>
               <div className="text-sm text-gray-600">Accuracy Rate</div>
             </Card>
             <Card className="text-center p-4 bg-white/60 backdrop-blur-sm border-green-200">
@@ -361,15 +365,7 @@ export default function DrawPage() {
                             <div className="text-8xl font-bold text-blue-600 bg-gradient-to-br from-blue-50 to-indigo-50 w-32 h-32 rounded-3xl flex items-center justify-center mx-auto shadow-inner border-2 border-blue-100">
                               {prediction}
                             </div>
-                            <div className="absolute -top-2 -right-2">
-                              {confidence >= 95 ? (
-                                <CheckCircle className="h-8 w-8 text-green-500 bg-white rounded-full" />
-                              ) : confidence >= 85 ? (
-                                <Target className="h-8 w-8 text-blue-500 bg-white rounded-full p-1" />
-                              ) : (
-                                <AlertCircle className="h-8 w-8 text-yellow-500 bg-white rounded-full" />
-                              )}
-                            </div>
+                            
                           </div>
 
                           <div>
@@ -384,7 +380,7 @@ export default function DrawPage() {
                         <div className="bg-gray-50 p-4 rounded-xl space-y-3">
                           <div className="flex items-center justify-between text-sm">
                             <span className="text-gray-600">Model Accuracy:</span>
-                            <span className="font-semibold text-green-600">99.14%</span>
+                            <span className="font-semibold text-green-600">98.2%</span>
                           </div>
                           <div className="flex items-center justify-between text-sm">
                             <span className="text-gray-600">Processing Time:</span>
@@ -392,12 +388,12 @@ export default function DrawPage() {
                           </div>
                           <div className="flex items-center justify-between text-sm">
                             <span className="text-gray-600">Model Version:</span>
-                            <span className="font-semibold text-gray-700">CNN</span>
+                            <span className="font-semibold text-gray-700">MLP</span>
                           </div>
                         </div>
 
                         <p className="text-sm text-gray-600 leading-relaxed">
-                          Our advanced CNN model analyzed your drawing and determined it most likely represents the
+                          Our advanced MLP model analyzed your drawing and determined it most likely represents the
                           digit <strong className="text-gray-900">{prediction}</strong> 
                         </p>
                       </>
@@ -442,7 +438,7 @@ export default function DrawPage() {
                               <div className="text-xs text-gray-500">{item.timestamp.toLocaleTimeString()}</div>
                             </div>
                           </div>
-                          <Badge className={getConfidenceBadge(item.confidence).color}>{item.confidence}%</Badge>
+                          
                         </div>
                       ))}
                     </div>
@@ -462,7 +458,7 @@ export default function DrawPage() {
                   <div className="space-y-4 text-sm">
                     <div className="flex justify-between">
                       <span className="text-blue-800">Architecture:</span>
-                      <span className="font-semibold text-blue-900">Convolutional Neural Network</span>
+                      <span className="font-semibold text-blue-900">Multilayer Perceptron</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-blue-800">Training Data:</span>
@@ -470,7 +466,7 @@ export default function DrawPage() {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-blue-800">Validation Accuracy:</span>
-                      <span className="font-semibold text-green-700">99.14%</span>
+                      <span className="font-semibold text-green-700">98.2%</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-blue-800">HIPAA Compliant:</span>
@@ -502,7 +498,7 @@ export default function DrawPage() {
                     <span className="text-xl font-bold text-indigo-600">2</span>
                   </div>
                   <h4 className="font-semibold text-gray-900">Feature Extraction</h4>
-                  <p className="text-sm text-gray-600">CNN layers identify key patterns and digit characteristics</p>
+                  <p className="text-sm text-gray-600">MLP layers identify key patterns and digit characteristics</p>
                 </div>
                 <div className="space-y-3">
                   <div className="bg-purple-100 w-12 h-12 rounded-xl flex items-center justify-center mx-auto">

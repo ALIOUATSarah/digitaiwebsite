@@ -66,7 +66,7 @@ export default function HomePage() {
             {/* Badge */}
             <div className="inline-flex items-center space-x-2 bg-white/60 backdrop-blur-sm border border-blue-200 text-blue-700 px-6 py-3 rounded-full text-sm font-semibold mb-8 shadow-lg">
               <Award className="h-4 w-4" />
-              <span>99.14% Accuracy Rate</span>
+              <span>98.2% Accuracy Rate</span>
               <Badge variant="secondary" className="bg-green-100 text-green-700">
                 Clinically Tested
               </Badge>
@@ -83,7 +83,7 @@ export default function HomePage() {
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-4xl mx-auto">
-              Transform healthcare documentation with our advanced CNN technology. Reduce medical form errors by{" "}
+              Transform healthcare documentation with our advanced MLP technology. Reduce medical form errors by{" "}
               <span className="font-semibold text-blue-600">95%</span> and improve patient safety through intelligent
               handwritten digit recognition.
             </p>
@@ -117,7 +117,7 @@ export default function HomePage() {
                 <div className="text-sm text-gray-600 font-medium">Healthcare Facilities</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-green-600">99.14%</div>
+                <div className="text-3xl font-bold text-green-600">98.2%</div>
                 <div className="text-sm text-gray-600 font-medium">Accuracy Rate</div>
               </div>
               <div>
@@ -170,7 +170,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Processing</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Our CNN model analyzes the image, extracting features and patterns to identify the digit with
+                  Our MLP model analyzes the image, extracting features and patterns to identify the digit with
                   exceptional accuracy.
                 </p>
               </CardContent>
@@ -208,10 +208,9 @@ export default function HomePage() {
                 <div className="bg-gradient-to-br from-blue-500 to-blue-600 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Brain className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Advanced CNN Architecture</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Advanced MLP Architecture</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  State-of-the-art convolutional neural networks trained on millions of healthcare-specific handwritten
-                  samples.
+                  State-of-the-art multilayer perceptron trained on millions of healthcare-specific handwritten samples.
                 </p>
               </CardContent>
             </Card>
@@ -246,7 +245,7 @@ export default function HomePage() {
                 <div className="bg-gradient-to-br from-orange-500 to-orange-600 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Target className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">99.14% Accuracy</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">98.2% Accuracy</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Industry-leading accuracy rates validated through extensive clinical testing and real-world
                   deployment.
@@ -336,7 +335,7 @@ export default function HomePage() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Patient Records</h3>
                     <p className="text-gray-600 leading-relaxed mb-4">
-                      Digitize handwritten patient IDs, room numbers, and vital signs from paper forms with 99%+
+                      Digitize handwritten patient IDs, room numbers, and vital signs from paper forms with 98%+
                       accuracy.
                     </p>
                     <div className="flex items-center space-x-2 text-green-600">
