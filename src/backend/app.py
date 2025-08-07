@@ -20,35 +20,29 @@ def center_image(img_array):
 
 @app.route("/predict", methods=["POST"])
 def predict():
+    data = request.get_json()
+    image_data = data.get("image")
+
+    if not image_data:
+        return jsonify({"error": "No image data provided"}), 400
+
     try:
-        data = request.get_json()
-        image_data = data.get("image")
+        image_data = image_data.split(",")[1]
+        decoded = base64.b64decode(image_data)
 
-        if not image_data:
-            return jsonify({"error": "No image data provided"}), 400
-
-        # DEBUG: log length/type
-        print("Received image data:", type(image_data), len(image_data))
-
-        image_data = image_data.split(",")[1]  # will break if "test"
-        image = Image.open(BytesIO(base64.b64decode(image_data))).convert("L").resize((28, 28))
-        image = image.filter(ImageFilter.GaussianBlur(radius=0.5))
-        image = Image.eval(image, lambda x: 255 - x)
-        image = image.point(lambda p: 255 if p > 50 else 0)
-        image = np.array(image)
-
-        image = center_image(image)
-        image = image.reshape(1, 784) / 255.0
+        print("✅ Decoded image size (bytes):", len(decoded))  # Add this
+        image = Image.open(BytesIO(decoded)).convert("L").resize((28, 28))
+        image = np.array(image).reshape(1, 28, 28, 1) / 255.0
 
         prediction = model.predict(image)
         predicted_digit = np.argmax(prediction)
         confidence = float(np.max(prediction)) * 100
 
         return jsonify({"prediction": int(predicted_digit), "confidence": round(confidence, 2)})
-
+    
     except Exception as e:
-        print("❌ ERROR:", str(e))  # <-- add this
-        return jsonify({"error": str(e)}), 500
+        print("❌ Exception in /predict:", str(e))
+        return jsonify({"error": "Failed to process image", "details": str(e)}), 500
 
 
 if __name__ == "__main__":
