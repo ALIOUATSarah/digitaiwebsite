@@ -1,45 +1,12 @@
-.next
-node_modules/
-# Python cache and compiled files
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-*.pdb
-
-# Virtual environment
-.venv/
-venv/
-env/
-
-# Environment variables / secrets
-.env
-*.env
-
-# Jupyter Notebook checkpoints (if any)
-.ipynb_checkpoints
-
-# OS-specific files
+node_modules
+target
+dist
+logs
+public
+.cache
+.vscode
 .DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# TensorFlow / model files (if not needed in repo)
-*.h5
-*.pb
-*.ckpt*
-saved_model/
-
-# Byte-compiled C extensions
-*.so
-
-# VSCode / IDE configs (optional)
-.vscode/
-.idea/
-
-# Build / distribution
-build/
-dist/
-*.egg-info/
+.idea
+.next
+yarn-error.log
+npm-debug.log
