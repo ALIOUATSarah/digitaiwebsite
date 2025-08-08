@@ -137,7 +137,7 @@ export default function DrawPage() {
 
     try {
       const res = await fetch(
-        "http://localhost:5000/predict",
+        "https://backend-qdfr.onrender.com/predict",
         {
           method: "POST",
           headers: {
