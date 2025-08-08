@@ -132,8 +132,8 @@ export default function DrawPage() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const image = canvas.toDataURL("image/png"); // base64 PNG
-    console.log("Image data:", imageDataURL);
+    const imagedataurl = canvas.toDataURL("image/png"); // base64 PNG
+    console.log("Image data:", imagedataurl);
 
     try {
       const res = await fetch(
@@ -144,7 +144,7 @@ export default function DrawPage() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            image: imageDataURL, // make sure this is the full base64 string
+            image: imageDataURL,
           }),
         },
       );
