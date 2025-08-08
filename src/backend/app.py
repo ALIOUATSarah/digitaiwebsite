@@ -42,10 +42,9 @@ def predict():
         image_data = image_data.split(",")[1]
         decoded = base64.b64decode(image_data)
 
-        print("✅ Decoded image size (bytes):", len(decoded))  # Add this
+        print("✅ Decoded image size (bytes):", len(decoded))
         image = Image.open(BytesIO(decoded)).convert("L").resize((28, 28))
-        image = np.array(image).reshape(1, 28, 28, 1) / 255.0
-
+        image = np.array(image).reshape(1, 784) / 255.0
         prediction = model.predict(image)
         predicted_digit = np.argmax(prediction)
         confidence = float(np.max(prediction)) * 100
@@ -60,4 +59,7 @@ def predict():
 
 
 if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=5000)
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=5000)
     app.run(debug=True, host="0.0.0.0", port=5000)
