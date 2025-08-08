@@ -5,6 +5,7 @@ from io import BytesIO
 from PIL import Image
 import numpy as np
 import tensorflow as tf
+from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
