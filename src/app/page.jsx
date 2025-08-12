@@ -41,7 +41,10 @@ export default function HomePage() {
                 Features
               </a>
               <a href="#how-it-works" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                How It Works
+                 How to Use Digit AI?
+              </a>
+              <a href="#how-it-works" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+                 How Our AI Works?
               </a>
               <a href="#stats" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
                 Results
@@ -67,24 +70,22 @@ export default function HomePage() {
             <div className="inline-flex items-center space-x-2 bg-white/60 backdrop-blur-sm border border-blue-200 text-blue-700 px-6 py-3 rounded-full text-sm font-semibold mb-8 shadow-lg">
               <Award className="h-4 w-4" />
               <span>98.2% Accuracy Rate</span>
-              <Badge variant="secondary" className="bg-green-100 text-green-700">
-                Clinically Tested
-              </Badge>
+              
             </div>
 
             {/* Main Heading */}
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
               Revolutionary
               <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                AI Digit Recognition
+                AI-based Digit recognition
               </span>
-              <span className="block text-4xl md:text-5xl text-gray-700 mt-2">for Healthcare</span>
+              <span className="block text-4xl md:text-5xl text-gray-700 mt-2">for healthcare innovation</span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-4xl mx-auto">
-              Transform healthcare documentation with our advanced MLP technology. Reduce medical form errors by{" "}
-              <span className="font-semibold text-blue-600">95%</span> and improve patient safety through intelligent
+              Transform healthcare documentation with our advanced MLP technology. Reduce medical form errors 
+              <span className="font-semibold text-blue-600"></span> and improve patient safety through intelligent
               handwritten digit recognition.
             </p>
 
@@ -111,23 +112,17 @@ export default function HomePage() {
             </div>
 
             {/* Trust Indicators */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-3xl font-bold text-blue-600">500+</div>
-                <div className="text-sm text-gray-600 font-medium">Healthcare Facilities</div>
-              </div>
+            <div className="flex justify-center gap-8 text-center">
+              
               <div>
                 <div className="text-3xl font-bold text-green-600">98.2%</div>
                 <div className="text-sm text-gray-600 font-medium">Accuracy Rate</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-purple-600">2M+</div>
+                <div className="text-3xl font-bold text-purple-600">70k</div>
                 <div className="text-sm text-gray-600 font-medium">Digits Processed</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-orange-600">95%</div>
-                <div className="text-sm text-gray-600 font-medium">Error Reduction</div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -139,58 +134,117 @@ export default function HomePage() {
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">How It Works</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our advanced AI system processes handwritten digits through a sophisticated neural network trained
-              specifically for healthcare applications.
-            </p>
+<section id="how-it-works" className="py-20 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"> How to Use Digit AI?</h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Our advanced AI system processes handwritten digits through a special algorithm trained
+        specifically for healthcare applications.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <Card className="relative overflow-hidden group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg">
+        <CardContent className="p-8 text-center">
+          <div className="bg-gradient-to-r from-blue-500 to-blue-700 px-6 py-3 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <span className="text-2xl font-bold text-white">Step 1</span>
           </div>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Draw or Upload</h3>
+          <p className="text-gray-600 leading-relaxed">
+            Simply draw a digit on our interactive canvas or upload an image of handwritten numbers from medical forms.
+          </p>
+        </CardContent>
+      </Card>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="relative overflow-hidden group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
-                <div className="bg-gradient-to-br from-blue-500 to-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl font-bold text-white">1</span>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Draw or Upload</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Simply draw a digit on our interactive canvas or upload an image of handwritten numbers from medical
-                  forms.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="relative overflow-hidden group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
-                <div className="bg-gradient-to-br from-indigo-500 to-indigo-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl font-bold text-white">2</span>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Processing</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Our MLP model analyzes the image, extracting features and patterns to identify the digit with
-                  exceptional accuracy.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="relative overflow-hidden group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
-                <div className="bg-gradient-to-br from-purple-500 to-purple-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl font-bold text-white">3</span>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Instant Results</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Get immediate predictions with confidence scores, helping healthcare professionals make informed
-                  decisions.
-                </p>
-              </CardContent>
-            </Card>
+      <Card className="relative overflow-hidden group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg">
+        <CardContent className="p-8 text-center">
+          <div className="bg-gradient-to-r from-purple-500 to-purple-700 px-6 py-3 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <span className="text-2xl font-bold text-white">Step 2</span>
           </div>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Processing</h3>
+          <p className="text-gray-600 leading-relaxed">
+            Our MLP model analyzes the image, extracting features and patterns to identify the digit with exceptional accuracy.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card className="relative overflow-hidden group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg">
+        <CardContent className="p-8 text-center">
+          <div className="bg-gradient-to-r from-green-500 to-green-700 px-6 py-3 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <span className="text-2xl font-bold text-white">Step 3</span>
+          </div>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Instant Results</h3>
+          <p className="text-gray-600 leading-relaxed">
+            Get immediate predictions with confidence bar, helping healthcare professionals make informed decisions.
+          </p>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
+{/* How Our AI Works – Stages timeline */}
+<Card className="mt-8 border-0 shadow-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50">
+  <CardContent className="pt-10 pb-10">
+    <div className="text-center mb-8">
+      <h3 className="text-3xl font-bold text-gray-900">How Our AI Works?</h3>
+      <p className="text-gray-600 mt-2">Advanced pipeline, same smooth experience</p>
+    </div>
+
+    {/* Timeline */}
+    <div className="relative max-w-5xl mx-auto">
+      
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        {/* Stage 1 */}
+        <div className="space-y-3">
+          <div className="inline-flex items-center justify-center px-4 h-10 rounded-2xl bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-semibold shadow">
+            Stage 1
+          </div>
+          <h4 className="font-semibold text-gray-900">Image Preprocessing</h4>
+          <p className="text-sm text-gray-600">
+            Normalize and enhance the drawing for clean, high-contrast input.
+          </p>
         </div>
-      </section>
+
+        {/* Stage 2 */}
+        <div className="space-y-3">
+          <div className="inline-flex items-center justify-center px-4 h-10 rounded-2xl bg-gradient-to-r from-indigo-500 to-indigo-700 text-white text-sm font-semibold shadow">
+            Stage 2
+          </div>
+          <h4 className="font-semibold text-gray-900">Feature Extraction</h4>
+          <p className="text-sm text-gray-600">
+            MLP learns stroke shapes and digit patterns from the image.
+          </p>
+        </div>
+
+        {/* Stage 3 */}
+        <div className="space-y-3">
+          <div className="inline-flex items-center justify-center px-4 h-10 rounded-2xl bg-gradient-to-r from-purple-500 to-purple-700 text-white text-sm font-semibold shadow">
+            Stage 3
+          </div>
+          <h4 className="font-semibold text-gray-900">Classification</h4>
+          <p className="text-sm text-gray-600">
+            Predicts the most likely digit (0–9) using the learned features.
+          </p>
+        </div>
+
+        {/* Stage 4 */}
+        <div className="space-y-3">
+          <div className="inline-flex items-center justify-center px-4 h-10 rounded-2xl bg-gradient-to-r from-green-500 to-green-600 text-white text-sm font-semibold shadow">
+            Stage 4
+          </div>
+          <h4 className="font-semibold text-gray-900">Confidence Analysis</h4>
+          <p className="text-sm text-gray-600">
+            Displays a confidence bar so results are transparent and clear.
+          </p>
+        </div>
+      </div>
+    </div>
+  </CardContent>
+</Card>
+
+
 
       {/* Features Section */}
       <section id="features" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -198,7 +252,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Powerful Features</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Built specifically for healthcare environments with enterprise-grade security and reliability.
+              Built specifically for healthcare environments with econsidering a residential infrastructure and reliability.
             </p>
           </div>
 
@@ -210,7 +264,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Advanced MLP Architecture</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  State-of-the-art multilayer perceptron trained on millions of healthcare-specific handwritten samples.
+                  State-of-the-art multilayer perceptron trained on thousands of handwritten samples.
                 </p>
               </CardContent>
             </Card>
@@ -222,7 +276,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Real-time Processing</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Lightning-fast predictions in under 100ms, enabling seamless integration into existing workflows.
+                  Lightning-fast predictions in under 10s, enabling seamless integration into existing workflows.
                 </p>
               </CardContent>
             </Card>
@@ -232,10 +286,9 @@ export default function HomePage() {
                 <div className="bg-gradient-to-br from-purple-500 to-purple-600 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Shield className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">HIPAA Compliant</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Resilient Infrastructure</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Enterprise-grade security with full HIPAA compliance and end-to-end encryption for patient data
-                  protection.
+                  Deployed with advanced, top-notch security protocols and built on a resilient, scalable architecture that ensures continuous uptime, fast performance, and secure data handling under any conditions.
                 </p>
               </CardContent>
             </Card>
@@ -247,8 +300,8 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">98.2% Accuracy</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Industry-leading accuracy rates validated through extensive clinical testing and real-world
-                  deployment.
+                 comparative  accuracy rates validated through k-fold cross-validation and standard test set evaluation.
+
                 </p>
               </CardContent>
             </Card>
@@ -258,9 +311,9 @@ export default function HomePage() {
                 <div className="bg-gradient-to-br from-indigo-500 to-indigo-600 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Users className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Multi-user Support</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">User-Friendly Design</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Scalable architecture supporting thousands of concurrent users with role-based access controls.
+                  Thoughtfully designed and tested for a smooth, intuitive experience, making it easy for anyone to use with minimal learning curve.
                 </p>
               </CardContent>
             </Card>
@@ -284,36 +337,37 @@ export default function HomePage() {
       <section id="stats" className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Proven Results</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Practical Results</h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Real-world impact across healthcare institutions worldwide
+              Demonstrated effective performance in testing, showing consistent accuracy and reliability in recognizing handwritten digits.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold mb-4">500+</div>
-              <div className="text-xl font-semibold text-blue-100 mb-2">Healthcare Facilities</div>
-              <div className="text-blue-200">Across 25 countries</div>
+              <div className="text-5xl md:text-6xl font-bold mb-4">98.2%</div>
+              <div className="text-xl font-semibold text-blue-100 mb-2">Model Accuracy</div>
+              <div className="text-blue-200">Based on k-fold validation</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold mb-4">2M+</div>
+              <div className="text-5xl md:text-6xl font-bold mb-4">70K</div>
               <div className="text-xl font-semibold text-blue-100 mb-2">Digits Processed</div>
-              <div className="text-blue-200">Monthly volume</div>
+              <div className="text-blue-200">During evaluation</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold mb-4">95%</div>
-              <div className="text-xl font-semibold text-blue-100 mb-2">Error Reduction</div>
-              <div className="text-blue-200">In medical forms</div>
+              <div className="text-5xl md:text-6xl font-bold mb-4">Low</div>
+              <div className="text-xl font-semibold text-blue-100 mb-2">Error Rate</div>
+              <div className="text-blue-200">Observed in test predictions</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold mb-4">$2.3M</div>
-              <div className="text-xl font-semibold text-blue-100 mb-2">Cost Savings</div>
-              <div className="text-blue-200">Per facility annually</div>
+              <div className="text-5xl md:text-6xl font-bold mb-4">$5K</div>
+              <div className="text-xl font-semibold text-blue-100 mb-2">Estimated Cost Savings</div>
+              <div className="text-blue-200">If applied in small-scale operations</div>
             </div>
           </div>
         </div>
       </section>
+      
 
       {/* Use Cases Section */}
       <section id="use-cases" className="py-20 bg-white">
@@ -339,8 +393,8 @@ export default function HomePage() {
                       accuracy.
                     </p>
                     <div className="flex items-center space-x-2 text-green-600">
-                      <CheckCircle className="h-4 w-4" />
-                      <span className="text-sm font-medium">Reduces data entry errors by 95%</span>
+                      
+                      
                     </div>
                   </div>
                 </div>
@@ -356,12 +410,11 @@ export default function HomePage() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Prescription Processing</h3>
                     <p className="text-gray-600 leading-relaxed mb-4">
-                      Accurately read dosage amounts and prescription numbers to prevent medication errors and improve
+                      Accurately read dosage values and prescription numbers to prevent medication errors and improve
                       patient safety.
                     </p>
                     <div className="flex items-center space-x-2 text-green-600">
-                      <CheckCircle className="h-4 w-4" />
-                      <span className="text-sm font-medium">Prevents 98% of dosage errors</span>
+                      
                     </div>
                   </div>
                 </div>
@@ -381,8 +434,7 @@ export default function HomePage() {
                       errors.
                     </p>
                     <div className="flex items-center space-x-2 text-green-600">
-                      <CheckCircle className="h-4 w-4" />
-                      <span className="text-sm font-medium">Speeds processing by 75%</span>
+                      
                     </div>
                   </div>
                 </div>
@@ -398,12 +450,11 @@ export default function HomePage() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Insurance Claims</h3>
                     <p className="text-gray-600 leading-relaxed mb-4">
-                      Automate claim number and amount recognition to accelerate insurance processing and reduce manual
+                      Automate claim number and value recognition to accelerate insurance processing and reduce manual
                       review time.
                     </p>
                     <div className="flex items-center space-x-2 text-green-600">
-                      <CheckCircle className="h-4 w-4" />
-                      <span className="text-sm font-medium">Reduces processing time by 80%</span>
+                      
                     </div>
                   </div>
                 </div>
@@ -413,85 +464,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">What Healthcare Professionals Say</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="border-0 shadow-lg bg-white">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-6 italic">
-                  "DigitAI has revolutionized our patient intake process. We've seen a 95% reduction in data entry
-                  errors and our staff can focus more on patient care."
-                </p>
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">DR</span>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">Dr. Sarah Rodriguez</div>
-                    <div className="text-sm text-gray-600">Chief Medical Officer, Metro Health</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg bg-white">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-6 italic">
-                  "The accuracy is incredible. We've processed over 100,000 forms and the AI consistently outperforms
-                  manual data entry. It's a game-changer."
-                </p>
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">MJ</span>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">Michael Johnson</div>
-                    <div className="text-sm text-gray-600">IT Director, Regional Medical Center</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg bg-white">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-6 italic">
-                  "Implementation was seamless and the ROI was immediate. We're saving $50,000 monthly in reduced
-                  administrative costs alone."
-                </p>
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">LC</span>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">Lisa Chen</div>
-                    <div className="text-sm text-gray-600">Operations Manager, City Hospital</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
@@ -512,13 +484,7 @@ export default function HomePage() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold rounded-xl"
-            >
-              Schedule Consultation
-            </Button>
+           
           </div>
         </div>
       </section>
@@ -547,75 +513,58 @@ export default function HomePage() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Pricing
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    API
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Documentation
+                  <a href="#how-it-works" className="hover:text-white transition-colors">
+                    How to Use Digit AI?
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Press
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
+<h4 className="font-semibold mb-4">Project Team</h4>
+  <ul className="space-y-2 text-gray-400">
+    <li>
+      <a href="https://www.linkedin.com/in/sarah-aliouat-965722284/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+        Sarah Aliouat
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/nazsa13/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+        Mhd Nazir Sagherji
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/maisam-wahbah/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+        Dr. Maisam Wahbah
+      </a>
+    </li>
+  </ul>
+</div>
             <div>
-              <h4 className="font-semibold mb-4">Support</h4>
+              <h4 className="font-semibold mb-4">Resources</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Help Center
+                  <a href="https://www.canva.com/design/DAGl8FmbDfY/OcUN-IPXF7i6thyYSYjiNg/edit?utm_content=DAGl8FmbDfY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener noreferrer">
+                    Project Overview
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Privacy Policy
+                  <a href="https://github.com/ALIOUATSarah/front-end.git" className="hover:text-white transition-colors">
+                    GitHub Repository
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Terms of Service
+                  <a href="https://github.com/ALIOUATSarah/front-end/blob/main/README.md" className="hover:text-white transition-colors">
+                     Documentation
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    HIPAA Compliance
-                  </a>
+                  
                 </li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 DigitAI. All rights reserved. Advancing healthcare through artificial intelligence.</p>
+            <p>&copy; 2025 DigitAI. All rights reserved. Advancing healthcare through artificial intelligence.</p>
           </div>
         </div>
       </footer>

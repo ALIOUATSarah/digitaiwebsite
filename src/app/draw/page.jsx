@@ -31,6 +31,7 @@ export default function DrawPage() {
   const [brushSize, setBrushSize] = useState(8);
   const [predictionHistory, setPredictionHistory] = useState([]);
   const [processingTime, setProcessingTime] = useState(null);
+const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -226,9 +227,9 @@ export default function DrawPage() {
               </div>
               <div>
                 <span className="text-lg font-bold text-gray-900">
-                  AI Digit Recognition
+                   DigitAI
                 </span>
-                <div className="text-xs text-gray-500">Healthcare Demo</div>
+                <div className="text-xs text-gray-500">Healthcare Innovation</div>
               </div>
             </div>
             <div className="flex items-center space-x-2">
@@ -248,7 +249,7 @@ export default function DrawPage() {
             </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Experience our advanced MLP technology in action. Draw any digit
-              (0-9) and watch our AI provide instant, accurate predictions with
+              (0-9) and watch Digit AI  provide instant, accurate predictions with
               detailed confidence results.
             </p>
           </div>
@@ -260,18 +261,52 @@ export default function DrawPage() {
               <div className="text-sm text-gray-600">Accuracy Rate</div>
             </Card>
             <Card className="text-center p-4 bg-white/60 backdrop-blur-sm border-green-200">
-              <div className="text-2xl font-bold text-green-600">&lt;100ms</div>
+              <div className="text-2xl font-bold text-green-600">&lt;10s</div>
               <div className="text-sm text-gray-600">Processing Time</div>
             </Card>
             <Card className="text-center p-4 bg-white/60 backdrop-blur-sm border-purple-200">
-              <div className="text-2xl font-bold text-purple-600">2M+</div>
+              <div className="text-2xl font-bold text-purple-600">70k</div>
               <div className="text-sm text-gray-600">Digits Processed</div>
             </Card>
             <Card className="text-center p-4 bg-white/60 backdrop-blur-sm border-orange-200">
-              <div className="text-2xl font-bold text-orange-600">500+</div>
-              <div className="text-sm text-gray-600">Healthcare Facilities</div>
+              <div className="text-2xl font-bold text-orange-600">Low</div>
+              <div className="text-sm text-gray-600">Error Rate</div>
             </Card>
           </div>
+{/* Digit Writing Guide */}
+<Card className="mb-8 shadow-xl border-0 bg-white/80 backdrop-blur-sm">
+  <CardHeader className="pb-2">
+    <CardTitle className="flex items-center space-x-2">
+      <Info className="h-5 w-5 text-blue-600" />
+      <span>Digit Writing Guide</span>
+      
+    </CardTitle>
+    
+      <p className="text-center text-sm text-gray-500 mb-4">
+  Please follow the guide below carefully to complete the process.
+</p>
+  </CardHeader>
+  <CardContent>
+    {/* 0–9 thumbnails */}
+    <div className="grid grid-cols-5 sm:grid-cols-10 gap-3 place-items-center">
+      {guideDigits.map((d) => (
+        <div key={d} className="flex flex-col items-center">
+          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gray-50 border border-gray-200 shadow-inner flex items-center justify-center overflow-hidden">
+            <img
+             src={`/guide/${d}.png`}
+
+              alt={`Example ${d}`}
+              className="w-10 h-10 object-contain"
+            />
+          </div>
+          <span className="mt-1 text-xs text-gray-600">{d}</span>
+        </div>
+      ))}
+    </div>
+
+   
+  </CardContent>
+</Card>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Canvas Section */}
@@ -284,33 +319,10 @@ export default function DrawPage() {
                       <span>Drawing Canvas</span>
                     </CardTitle>
                     <div className="flex items-center space-x-2">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => setBrushSize(4)}
-                      >
-                        <span
-                          className={`w-2 h-2 rounded-full bg-gray-600 ${brushSize === 4 ? "ring-2 ring-blue-500" : ""}`}
-                        ></span>
-                      </Button>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => setBrushSize(8)}
-                      >
-                        <span
-                          className={`w-3 h-3 rounded-full bg-gray-600 ${brushSize === 8 ? "ring-2 ring-blue-500" : ""}`}
-                        ></span>
-                      </Button>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => setBrushSize(12)}
-                      >
-                        <span
-                          className={`w-4 h-4 rounded-full bg-gray-600 ${brushSize === 12 ? "ring-2 ring-blue-500" : ""}`}
-                        ></span>
-                      </Button>
+                      
+                        
+                  
+                       
                     </div>
                   </div>
                 </CardHeader>
@@ -480,11 +492,11 @@ export default function DrawPage() {
                           <Brain className="h-20 w-20 mx-auto" />
                         </div>
                         <p className="text-lg text-gray-500 mb-4">
-                          Draw a digit and click "Predict" to see AI analysis
+                          Draw a digit and click "Predict Digit" to see AI analysis
                         </p>
                         <div className="bg-gray-50 p-4 rounded-xl">
                           <p className="text-sm text-gray-600">
-                            Our AI is ready to analyze your handwritten digits
+                            Digit AI is ready to analyze your handwritten digits
                             with healthcare-grade accuracy.
                           </p>
                         </div>
@@ -551,7 +563,7 @@ export default function DrawPage() {
                     <div className="flex justify-between">
                       <span className="text-blue-800">Training Data:</span>
                       <span className="font-semibold text-blue-900">
-                        2M+ Healthcare Samples
+                        70K Samples
                       </span>
                     </div>
                     <div className="flex justify-between">
@@ -563,7 +575,7 @@ export default function DrawPage() {
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-blue-800">HIPAA Compliant:</span>
+                      <span className="text-blue-800">resilient infrastructure:</span>
                       <span className="font-semibold text-green-700">
                         ✓ Certified
                       </span>
@@ -574,68 +586,90 @@ export default function DrawPage() {
             </div>
           </div>
 
-          {/* How It Works Section */}
-          <Card className="mt-8 bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-blue-200 shadow-xl">
-            <CardContent className="pt-8 pb-8">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  How Our AI Works
-                </h3>
-                <p className="text-gray-600">
-                  Advanced machine learning pipeline optimized for healthcare
-                  accuracy
-                </p>
-              </div>
-              <div className="grid md:grid-cols-4 gap-6 text-center">
-                <div className="space-y-3">
-                  <div className="bg-blue-100 w-12 h-12 rounded-xl flex items-center justify-center mx-auto">
-                    <span className="text-xl font-bold text-blue-600">1</span>
-                  </div>
-                  <h4 className="font-semibold text-gray-900">
-                    Image Preprocessing
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Normalize and enhance your drawing for optimal recognition
-                  </p>
-                </div>
-                <div className="space-y-3">
-                  <div className="bg-indigo-100 w-12 h-12 rounded-xl flex items-center justify-center mx-auto">
-                    <span className="text-xl font-bold text-indigo-600">2</span>
-                  </div>
-                  <h4 className="font-semibold text-gray-900">
-                    Feature Extraction
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    MLP layers identify key patterns and digit characteristics
-                  </p>
-                </div>
-                <div className="space-y-3">
-                  <div className="bg-purple-100 w-12 h-12 rounded-xl flex items-center justify-center mx-auto">
-                    <span className="text-xl font-bold text-purple-600">3</span>
-                  </div>
-                  <h4 className="font-semibold text-gray-900">
-                    Classification
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Advanced neural network predicts the most likely digit
-                  </p>
-                </div>
-                <div className="space-y-3">
-                  <div className="bg-green-100 w-12 h-12 rounded-xl flex items-center justify-center mx-auto">
-                    <span className="text-xl font-bold text-green-600">4</span>
-                  </div>
-                  <h4 className="font-semibold text-gray-900">
-                    Confidence Analysis
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Calculate prediction confidence for healthcare reliability
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          
         </div>
+      
       </main>
+       {/* Footer */}
+      <footer className="bg-gray-900 text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="bg-gradient-to-br from-blue-600 to-indigo-600 p-2 rounded-xl">
+                  <Brain className="h-6 w-6 text-white" />
+                </div>
+                <span className="text-xl font-bold">DigitAI</span>
+              </div>
+              <p className="text-gray-400 leading-relaxed">
+                Advancing healthcare through intelligent digit recognition technology.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Product</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>
+                  <a href="#features" className="hover:text-white transition-colors">
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a href="#how-it-works" className="hover:text-white transition-colors">
+                    How to Use Digit AI?
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+<h4 className="font-semibold mb-4">Project Team</h4>
+  <ul className="space-y-2 text-gray-400">
+    <li>
+      <a href="https://www.linkedin.com/in/sarah-aliouat-965722284/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+        Sarah Aliouat
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/nazsa13/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+        Mhd Nazir Sagherji
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/maisam-wahbah/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+        Dr. Maisam Wahbah
+      </a>
+    </li>
+  </ul>
+</div>
+            <div>
+              <h4 className="font-semibold mb-4">Resources</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>
+                  <a href="https://www.canva.com/design/DAGl8FmbDfY/OcUN-IPXF7i6thyYSYjiNg/edit?utm_content=DAGl8FmbDfY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener noreferrer">
+                    Project Overview
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/ALIOUATSarah/front-end.git" className="hover:text-white transition-colors">
+                    GitHub Repository
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/ALIOUATSarah/front-end/blob/main/README.md" className="hover:text-white transition-colors">
+                     Documentation
+                  </a>
+                </li>
+                <li>
+                  
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 DigitAI. All rights reserved. Advancing healthcare through artificial intelligence.</p>
+          </div>
+        </div>
+      </footer>
     </div>
+    
   );
 }
