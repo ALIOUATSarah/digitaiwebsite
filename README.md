@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 DigitAI – Frontend
 
-## Getting Started
+DigitAI is a web-based AI solution for handwritten digit recognition, built with **Next.js** and **Tailwind CSS**.  
+It connects to a Flask backend (link will be added after deployment) that runs trained **MLP** and **VGG16** models for digit prediction.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📌 Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+DigitAI provides an intuitive interface where users can:
+- Draw digits directly on an interactive canvas.
+- Upload images of handwritten numbers.
+- Get instant AI-powered predictions.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The project is designed for quick digit recognition with a clean, user-friendly UI.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Features
 
-To learn more about Next.js, take a look at the following resources:
+- 🎨 **Modern UI** – Styled with Tailwind CSS for a responsive, mobile-friendly experience.
+- 🖌 **Interactive Drawing Canvas** – Users can draw digits for instant recognition.
+- 📂 **Image Upload Support** – Recognize handwritten digits from uploaded images.
+- ⚡ **Real-time Predictions** – Fast API response from backend AI models.
+- 🔒 **Secure & Scalable** – Ready for deployment with HTTPS and secure API calls.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧠 Models Used (Backend)
 
-## Deploy on Vercel
+- **MLP (Multi-Layer Perceptron)** – High accuracy with low computational cost.
+- **VGG16** – Deep learning CNN model for image recognition.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> ⚠ The backend code is not in this repository.  
+> After deployment, the backend link will be added here:  
+> **Backend API URL:** _Coming Soon_
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📂 Project Structure
+
+```plaintext
+frontend/              # Next.js + Tailwind CSS app
+├── components/        # Reusable UI components
+├── pages/             # Next.js pages
+├── public/            # Static assets (images, icons)
+├── styles/            # Tailwind and global CSS
+├── package.json       # Dependencies and scripts
+└── README.md          # Project documentation
