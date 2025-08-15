@@ -41,10 +41,10 @@ export default function HomePage() {
                 Features
               </a>
               <a href="#how-it-works" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                 How to Use Digit AI?
+                 How to Use DigitAI?
               </a>
               <a href="#how-it-works" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
-                 How Our AI Works?
+                 How DigitAI Works?
               </a>
               <a href="#stats" className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
                 Results
@@ -77,7 +77,7 @@ export default function HomePage() {
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
               Revolutionary
               <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                AI-based Digit recognition
+                AI-based Digit Recognition
               </span>
               <span className="block text-4xl md:text-5xl text-gray-700 mt-2">for healthcare innovation</span>
             </h1>
@@ -101,14 +101,8 @@ export default function HomePage() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-gray-300 hover:border-blue-300 px-8 py-4 text-lg font-semibold rounded-xl"
-              >
-                <BarChart3 className="mr-2 h-5 w-5" />
-                View Demo Video
-              </Button>
+             
+             
             </div>
 
             {/* Trust Indicators */}
@@ -119,7 +113,7 @@ export default function HomePage() {
                 <div className="text-sm text-gray-600 font-medium">Accuracy Rate</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-purple-600">70k</div>
+                <div className="text-3xl font-bold text-purple-600">70K</div>
                 <div className="text-sm text-gray-600 font-medium">Digits Processed</div>
               </div>
               
@@ -137,7 +131,7 @@ export default function HomePage() {
 <section id="how-it-works" className="py-20 bg-white">
   <div className="container mx-auto px-4">
     <div className="text-center mb-16">
-      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"> How to Use Digit AI?</h2>
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"> How to Use DigitAI?</h2>
       <p className="text-xl text-gray-600 max-w-3xl mx-auto">
         Our advanced AI system processes handwritten digits through a special algorithm trained
         specifically for healthcare applications.
@@ -152,7 +146,8 @@ export default function HomePage() {
           </div>
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Draw or Upload</h3>
           <p className="text-gray-600 leading-relaxed">
-            Simply draw a digit on our interactive canvas or upload an image of handwritten numbers from medical forms.
+            Simply draw a digit on our interactive canvas or upload an image of A handwriteen number.
+
           </p>
         </CardContent>
       </Card>
@@ -162,7 +157,7 @@ export default function HomePage() {
           <div className="bg-gradient-to-r from-purple-500 to-purple-700 px-6 py-3 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
             <span className="text-2xl font-bold text-white">Step 2</span>
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Processing</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Feature Extraction</h3>
           <p className="text-gray-600 leading-relaxed">
             Our MLP model analyzes the image, extracting features and patterns to identify the digit with exceptional accuracy.
           </p>
@@ -176,7 +171,9 @@ export default function HomePage() {
           </div>
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Instant Results</h3>
           <p className="text-gray-600 leading-relaxed">
-            Get immediate predictions with confidence bar, helping healthcare professionals make informed decisions.
+            Get immediate results with a bar representing the confidence scale 
+, For making  informed decisions.
+
           </p>
         </CardContent>
       </Card>
@@ -187,60 +184,60 @@ export default function HomePage() {
 <Card className="mt-8 border-0 shadow-xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50">
   <CardContent className="pt-10 pb-10">
     <div className="text-center mb-8">
-      <h3 className="text-3xl font-bold text-gray-900">How Our AI Works?</h3>
-      <p className="text-gray-600 mt-2">Advanced pipeline, same smooth experience</p>
+      <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">How DigitAI Works?</h3>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">Advanced pipeline with a smooth experience</p>
     </div>
-
-    {/* Timeline */}
-    <div className="relative max-w-5xl mx-auto">
-      
-
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        {/* Stage 1 */}
-        <div className="space-y-3">
-          <div className="inline-flex items-center justify-center px-4 h-10 rounded-2xl bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-semibold shadow">
-            Stage 1
-          </div>
-          <h4 className="font-semibold text-gray-900">Image Preprocessing</h4>
-          <p className="text-sm text-gray-600">
-            Normalize and enhance the drawing for clean, high-contrast input.
-          </p>
-        </div>
-
-        {/* Stage 2 */}
-        <div className="space-y-3">
-          <div className="inline-flex items-center justify-center px-4 h-10 rounded-2xl bg-gradient-to-r from-indigo-500 to-indigo-700 text-white text-sm font-semibold shadow">
-            Stage 2
-          </div>
-          <h4 className="font-semibold text-gray-900">Feature Extraction</h4>
-          <p className="text-sm text-gray-600">
-            MLP learns stroke shapes and digit patterns from the image.
-          </p>
-        </div>
-
-        {/* Stage 3 */}
-        <div className="space-y-3">
-          <div className="inline-flex items-center justify-center px-4 h-10 rounded-2xl bg-gradient-to-r from-purple-500 to-purple-700 text-white text-sm font-semibold shadow">
-            Stage 3
-          </div>
-          <h4 className="font-semibold text-gray-900">Classification</h4>
-          <p className="text-sm text-gray-600">
-            Predicts the most likely digit (0–9) using the learned features.
-          </p>
-        </div>
-
-        {/* Stage 4 */}
-        <div className="space-y-3">
-          <div className="inline-flex items-center justify-center px-4 h-10 rounded-2xl bg-gradient-to-r from-green-500 to-green-600 text-white text-sm font-semibold shadow">
-            Stage 4
-          </div>
-          <h4 className="font-semibold text-gray-900">Confidence Analysis</h4>
-          <p className="text-sm text-gray-600">
-            Displays a confidence bar so results are transparent and clear.
-          </p>
-        </div>
+<div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+  <Card className="relative overflow-hidden group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg">
+    <CardContent className="p-6 text-center">
+      <div className="bg-gradient-to-r from-blue-500 to-blue-700 px-4 py-2 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <span className="text-lg font-bold text-white">Stage 1</span>
       </div>
-    </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">Image Preprocessing</h3>
+      <p className="text-gray-600 text-sm leading-relaxed">
+        Normalize and enhance the drawing for clean, high-contrast input.
+      </p>
+    </CardContent>
+  </Card>
+
+  <Card className="relative overflow-hidden group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg">
+    <CardContent className="p-6 text-center">
+      <div className="bg-gradient-to-r from-purple-500 to-purple-700 px-4 py-2 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <span className="text-lg font-bold text-white">Stage 2</span>
+      </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">Feature Extraction</h3>
+      <p className="text-gray-600 text-sm leading-relaxed">
+        MLP learns stroke shapes and digit patterns from the image.
+      </p>
+    </CardContent>
+  </Card>
+
+  <Card className="relative overflow-hidden group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg">
+    <CardContent className="p-6 text-center">
+      <div className="bg-gradient-to-r from-green-500 to-green-700 px-4 py-2 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+        <span className="text-lg font-bold text-white">Stage 3</span>
+      </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">Classification</h3>
+      <p className="text-gray-600 text-sm leading-relaxed">
+        Recognize using the learned features and display the result (0-9).
+      </p>
+    </CardContent>
+  </Card>
+
+  <Card className="relative overflow-hidden group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg">
+    <CardContent className="p-6 text-center">
+      <div className="bg-gradient-to-r from-cyan-400 to-teal-500 px-6 py-3 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+        <span className="text-lg font-bold text-white">Stage 4</span>
+      </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">Confidence Analysis</h3>
+      <p className="text-gray-600 text-sm leading-relaxed">
+        Displays a confidence bar so results are transparent and clear.
+      </p>
+    </CardContent>
+  </Card>
+</div>
+
+
   </CardContent>
 </Card>
 
@@ -252,7 +249,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Powerful Features</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Built specifically for healthcare environments with econsidering a residential infrastructure and reliability.
+              Built specifically for healthcare environments with a resilient infrastructure and reliability.
             </p>
           </div>
 
@@ -274,9 +271,9 @@ export default function HomePage() {
                 <div className="bg-gradient-to-br from-green-500 to-green-600 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Clock className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Real-time Processing</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3"> Adaptive Processing</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Lightning-fast predictions in under 10s, enabling seamless integration into existing workflows.
+                  Lightning-fast recognitions in under 10s, enabling seamless integration into existing workflows.
                 </p>
               </CardContent>
             </Card>
@@ -300,12 +297,24 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">98.2% Accuracy</h3>
                 <p className="text-gray-600 leading-relaxed">
-                 comparative  accuracy rates validated through k-fold cross-validation and standard test set evaluation.
+                 Comparative  accuracy rates validated through cross-validation and standard test set evaluation.
 
                 </p>
               </CardContent>
             </Card>
 
+            
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white/80 backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="bg-gradient-to-br from-teal-500 to-teal-600 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <TrendingUp className="h-7 w-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Continuous Learning</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Self-improving AI that learns from new data while maintaining privacy and security standards.
+                </p>
+              </CardContent>
+            </Card>
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white/80 backdrop-blur-sm">
               <CardContent className="p-8">
                 <div className="bg-gradient-to-br from-indigo-500 to-indigo-600 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -318,17 +327,6 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white/80 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <div className="bg-gradient-to-br from-teal-500 to-teal-600 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <TrendingUp className="h-7 w-7 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Continuous Learning</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Self-improving AI that learns from new data while maintaining privacy and security standards.
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -357,7 +355,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="text-5xl md:text-6xl font-bold mb-4">Low</div>
               <div className="text-xl font-semibold text-blue-100 mb-2">Error Rate</div>
-              <div className="text-blue-200">Observed in test predictions</div>
+              <div className="text-blue-200">Observed in test results</div>
             </div>
             <div className="text-center">
               <div className="text-5xl md:text-6xl font-bold mb-4">$5K</div>
@@ -470,8 +468,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Healthcare Operations?</h2>
           <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
-            Join 500+ healthcare facilities already using DigitAI to improve accuracy, reduce costs, and enhance patient
-            care.
+            Test our prototype and experience how AI can instantly read handwritten digits — a step toward reducing errors and boosting efficiency in healthcare.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/draw">
@@ -480,7 +477,7 @@ export default function HomePage() {
                 className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
               >
                 <Zap className="mr-2 h-5 w-5" />
-                Try Free Demo
+                try DigitAI
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -514,7 +511,7 @@ export default function HomePage() {
                 </li>
                 <li>
                   <a href="#how-it-works" className="hover:text-white transition-colors">
-                    How to Use Digit AI?
+                    How to Use DigitAI?
                   </a>
                 </li>
               </ul>
@@ -544,7 +541,7 @@ export default function HomePage() {
               <ul className="space-y-2 text-gray-400">
                 <li>
                   <a href="https://www.canva.com/design/DAGl8FmbDfY/OcUN-IPXF7i6thyYSYjiNg/edit?utm_content=DAGl8FmbDfY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener noreferrer">
-                    Project Overview
+                    Project brochure
                   </a>
                 </li>
                 <li>

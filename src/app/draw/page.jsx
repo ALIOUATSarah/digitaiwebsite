@@ -232,9 +232,7 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
                 <div className="text-xs text-gray-500">Healthcare Innovation</div>
               </div>
             </div>
-            <div className="flex items-center space-x-2">
-              <Badge className="bg-green-100 text-green-800">Live demo</Badge>
-            </div>
+
           </div>
         </div>
       </header>
@@ -249,8 +247,8 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
             </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Experience our advanced MLP technology in action. Draw any digit
-              (0-9) and watch Digit AI  provide instant, accurate predictions with
-              detailed confidence results.
+              (0-9) and watch DigitAI  provide instant, accurate results  with
+              detailed confidence analysis.
             </p>
           </div>
 
@@ -265,7 +263,7 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
               <div className="text-sm text-gray-600">Processing Time</div>
             </Card>
             <Card className="text-center p-4 bg-white/60 backdrop-blur-sm border-purple-200">
-              <div className="text-2xl font-bold text-purple-600">70k</div>
+              <div className="text-2xl font-bold text-purple-600">70K</div>
               <div className="text-sm text-gray-600">Digits Processed</div>
             </Card>
             <Card className="text-center p-4 bg-white/60 backdrop-blur-sm border-orange-200">
@@ -376,7 +374,7 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
                       >
                         <Zap className="h-4 w-4" />
                         <span>
-                          {isLoading ? "Analyzing..." : "Predict Digit"}
+                          {isLoading ? "Analyzing..." : "Run DigitAI"}
                         </span>
                       </Button>
 
@@ -396,12 +394,10 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
                         <div className="text-sm text-blue-800">
                           <p className="font-medium mb-1">Drawing Tips:</p>
                           <ul className="space-y-1 text-xs">
-                            <li>• Draw digits clearly in the center</li>
+                            <li>• Draw the digit clearly in the center</li>
                             <li>• Use consistent stroke width</li>
-                            <li>• Ensure digits fill most of the canvas</li>
-                            <li>
-                              • Try different brush sizes for best results
-                            </li>
+                            <li>• Ensure the digit fill most of the canvas</li>
+                            
                           </ul>
                         </div>
                       </div>
@@ -418,7 +414,7 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
                     <Brain className="h-5 w-5 text-blue-600" />
-                    <span>AI Prediction</span>
+                    <span>DigitAI Results </span>
                     {processingTime && (
                       <Badge variant="outline" className="ml-auto">
                         <Clock className="h-3 w-3 mr-1" />
@@ -440,9 +436,9 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
 
                           <div>
                             <p className="text-2xl font-bold text-gray-900 mb-2">
-                              Predicted Digit: {prediction}
+                              Recognized Digit: {prediction}
                             </p>
-                            <div className="space-y-2">
+                            <div className="space-y-2 from-cyan-400 to-teal-500">
                               <Progress
                                 value={confidence}
                                 className="w-full h-3"
@@ -492,11 +488,12 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
                           <Brain className="h-20 w-20 mx-auto" />
                         </div>
                         <p className="text-lg text-gray-500 mb-4">
-                          Draw a digit and click "Predict Digit" to see AI analysis
+                          Draw a digit and click "Run DigitAI
+" to see AI analysis
                         </p>
                         <div className="bg-gray-50 p-4 rounded-xl">
                           <p className="text-sm text-gray-600">
-                            Digit AI is ready to analyze your handwritten digits
+                            DigitAI is ready to analyze your handwritten digits
                             with healthcare-grade accuracy.
                           </p>
                         </div>
@@ -512,7 +509,7 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
                   <CardHeader>
                     <CardTitle className="flex items-center space-x-2">
                       <TrendingUp className="h-5 w-5 text-green-600" />
-                      <span>Recent Predictions</span>
+                      <span>Recent results</span>
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -575,7 +572,7 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-blue-800">resilient infrastructure:</span>
+                      <span className="text-blue-800">Resilient Infrastructure:</span>
                       <span className="font-semibold text-green-700">
                         ✓ Certified
                       </span>
@@ -615,7 +612,7 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
                 </li>
                 <li>
                   <a href="#how-it-works" className="hover:text-white transition-colors">
-                    How to Use Digit AI?
+                    How to Use DigitAI?
                   </a>
                 </li>
               </ul>
