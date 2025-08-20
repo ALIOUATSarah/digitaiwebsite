@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+
 import {
   ArrowLeft,
   RotateCcw,
@@ -138,7 +139,7 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
 
     try {
       const res = await fetch(
-        "https://backend-qdfr.onrender.com/predict",
+        "https://backend-4ozp.onrender.com/predict",
         {
           method: "POST",
           headers: {
@@ -207,8 +208,8 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
       color: "bg-red-100 text-red-800",
     };
   };
-
   return (
+   
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
@@ -246,7 +247,7 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
               Interactive Digit Recognition
             </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Experience our advanced MLP technology in action. Draw any digit
+              Experience DigitAI in action. Draw any digit
               (0-9) and watch DigitAI  provide instant, accurate results  with
               detailed confidence analysis.
             </p>
@@ -391,12 +392,12 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
                     <div className="bg-blue-50 p-4 rounded-xl w-full max-w-md">
                       <div className="flex items-start space-x-3">
                         <Info className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                        <div className="text-sm text-blue-800">
+                        <div className="text-lg text-blue-800">
                           <p className="font-medium mb-1">Drawing Tips:</p>
-                          <ul className="space-y-1 text-xs">
+                          <ul className="space-y-1 text-base">
                             <li>• Draw the digit clearly in the center</li>
                             <li>• Use consistent stroke width</li>
-                            <li>• Ensure the digit fill most of the canvas</li>
+                            <li>• Ensure the digit fills most of the canvas</li>
                             
                           </ul>
                         </div>
@@ -551,12 +552,7 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-blue-800">Architecture:</span>
-                      <span className="font-semibold text-blue-900">
-                        Multilayer Perceptron
-                      </span>
-                    </div>
+                    
                     <div className="flex justify-between">
                       <span className="text-blue-800">Training Data:</span>
                       <span className="font-semibold text-blue-900">
@@ -606,12 +602,12 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
               <h4 className="font-semibold mb-4">Product</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <a href="#features" className="hover:text-white transition-colors">
+                  <a href="/#features" className="hover:text-white transition-colors">
                     Features
                   </a>
                 </li>
                 <li>
-                  <a href="#how-it-works" className="hover:text-white transition-colors">
+                  <a href="/#how-it-works" className="hover:text-white transition-colors">
                     How to Use DigitAI?
                   </a>
                 </li>
@@ -641,8 +637,8 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
               <h4 className="font-semibold mb-4">Resources</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <a href="https://www.canva.com/design/DAGl8FmbDfY/OcUN-IPXF7i6thyYSYjiNg/edit?utm_content=DAGl8FmbDfY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener noreferrer">
-                    Project Overview
+                  <a href="https://www.canva.com/design/DAGl8FmbDfY/OcUN-IPXF7i6thyYSYjiNg/edit?utm_content=DAGl8FmbDfY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                    Project Brochure
                   </a>
                 </li>
                 <li>
