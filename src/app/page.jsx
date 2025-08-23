@@ -77,7 +77,7 @@ export default function HomePage() {
             {/* Badge */}
             <div className="inline-flex items-center space-x-2 bg-white/60 backdrop-blur-sm border border-blue-200 text-blue-700 px-6 py-3 rounded-full text-sm font-semibold mb-8 shadow-lg">
               <Award className="h-4 w-4" />
-              <span>98.2% Accuracy Rate</span>
+              <span>99.1% Accuracy Rate</span>
               
             </div>
 
@@ -117,7 +117,7 @@ export default function HomePage() {
             <div className="flex justify-center gap-8 text-center">
               
               <div>
-                <div className="text-3xl font-bold text-green-600">98.2%</div>
+                <div className="text-3xl font-bold text-green-600">99.1%</div>
                 <div className="text-sm text-gray-600 font-medium">Accuracy Rate</div>
               </div>
               <div>
@@ -304,7 +304,7 @@ for making  informed decisions.
                 <div className="bg-gradient-to-br from-orange-500 to-orange-600 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Target className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">98.2% Accuracy</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">99.1% Accuracy</h3>
                 <p className="text-gray-600 leading-relaxed">
                  Comparative  accuracy rates validated through cross-validation and standard test set evaluation.
 
@@ -352,7 +352,7 @@ for making  informed decisions.
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold mb-4">98.2%</div>
+              <div className="text-5xl md:text-6xl font-bold mb-4">99.1%</div>
               <div className="text-xl font-semibold text-blue-100 mb-2">Model Accuracy</div>
               <div className="text-blue-200">Based on
 standard cross-validation.</div>

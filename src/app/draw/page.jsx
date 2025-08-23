@@ -139,7 +139,7 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
 
     try {
       const res = await fetch(
-        "https://backend-4ozp.onrender.com/predict",
+        "https://backend-3hms.onrender.com/predict",
         {
           method: "POST",
           headers: {
@@ -256,7 +256,7 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
           {/* Stats Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             <Card className="text-center p-4 bg-white/60 backdrop-blur-sm border-blue-200">
-              <div className="text-2xl font-bold text-blue-600">98.2%</div>
+              <div className="text-2xl font-bold text-blue-600">99.1%</div>
               <div className="text-sm text-gray-600">Accuracy Rate</div>
             </Card>
             <Card className="text-center p-4 bg-white/60 backdrop-blur-sm border-green-200">
@@ -454,7 +454,7 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
                               Model Accuracy:
                             </span>
                             <span className="font-semibold text-green-600">
-                              98.2%
+                              99.1%
                             </span>
                           </div>
                           <div className="flex items-center justify-between text-sm">
@@ -470,13 +470,13 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
                               Model Version:
                             </span>
                             <span className="font-semibold text-gray-700">
-                              MLP
+                              CNN
                             </span>
                           </div>
                         </div>
 
                         <p className="text-sm text-gray-600 leading-relaxed">
-                          Our advanced MLP model analyzed your drawing and
+                          DigitAI analyzed your drawing and
                           determined it most likely represents the digit{" "}
                           <strong className="text-gray-900">
                             {prediction}
@@ -564,7 +564,7 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
                         Validation Accuracy:
                       </span>
                       <span className="font-semibold text-green-700">
-                        98.2%
+                        99.1%
                       </span>
                     </div>
                     <div className="flex justify-between">
