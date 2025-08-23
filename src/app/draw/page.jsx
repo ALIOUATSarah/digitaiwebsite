@@ -139,7 +139,7 @@ const guideDigits = [0, 1, 2, 3, 4, 5,6,7,8,9];
 
     try {
       const res = await fetch(
-        "https://backend-3hms.onrender.com/predict",
+        "https://digitaiwebsitebackend.onrender.com/predict",
         {
           method: "POST",
           headers: {
