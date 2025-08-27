@@ -355,7 +355,7 @@ for making  informed decisions.
               <div className="text-5xl md:text-6xl font-bold mb-4">99.1%</div>
               <div className="text-xl font-semibold text-blue-100 mb-2">Model Accuracy</div>
               <div className="text-blue-200">Based on
-standard cross-validation.</div>
+standard cross-validation</div>
             </div>
             <div className="text-center">
               <div className="text-5xl md:text-6xl font-bold mb-4">70K</div>
@@ -478,7 +478,7 @@ the development cycle</div>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Elevate Your Healthcare Operations?</h2>
           <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
-            Test our DigitAI and experience how it can instantly read handwritten digits — a step toward reducing errors and boosting efficiency in healthcare.
+            Test DigitAI and experience how it can instantly read handwritten digits — a step toward reducing errors and boosting efficiency in healthcare.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/draw">
